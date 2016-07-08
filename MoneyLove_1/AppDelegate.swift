@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
 //        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
         
-        let debtVC = TrendTableViewController(nibName: "TrendTableViewController", bundle: nil)
+        let debtVC = MonthlyReportViewController(nibName: "MonthlyReportViewController", bundle: nil)
         let nav = UINavigationController(rootViewController: debtVC)
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
