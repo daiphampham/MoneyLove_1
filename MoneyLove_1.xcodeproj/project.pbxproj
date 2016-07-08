@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5153B1CA1D2F48C800413269 /* PayReceiavableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5153B1C81D2F48C800413269 /* PayReceiavableTableView.swift */; };
+		5153B1CB1D2F48C800413269 /* PayReceiavableTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5153B1C91D2F48C800413269 /* PayReceiavableTableView.xib */; };
+		51FC24A31D2DE58E0067CC71 /* DebtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FC24A11D2DE58E0067CC71 /* DebtViewController.swift */; };
+		51FC24A41D2DE58E0067CC71 /* DebtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FC24A21D2DE58E0067CC71 /* DebtViewController.xib */; };
+		51FC24A71D2DE6010067CC71 /* TrendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FC24A51D2DE6010067CC71 /* TrendTableViewController.swift */; };
+		51FC24A81D2DE6010067CC71 /* TrendTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FC24A61D2DE6010067CC71 /* TrendTableViewController.xib */; };
+		51FC24AC1D2DE6830067CC71 /* MonthlyReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FC24AA1D2DE6830067CC71 /* MonthlyReportTableViewController.swift */; };
+		51FC24AD1D2DE6830067CC71 /* MonthlyReportTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FC24AB1D2DE6830067CC71 /* MonthlyReportTableViewController.xib */; };
+		51FC252B1D2E07A90067CC71 /* PayReceiavableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FC25291D2E07A90067CC71 /* PayReceiavableTableViewController.swift */; };
+		51FC252C1D2E07A90067CC71 /* PayReceiavableTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FC252A1D2E07A90067CC71 /* PayReceiavableTableViewController.xib */; };
+		51FC25361D2E36350067CC71 /* ActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FC25341D2E36350067CC71 /* ActionTableViewCell.swift */; };
+		51FC25371D2E36350067CC71 /* ActionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FC25351D2E36350067CC71 /* ActionTableViewCell.xib */; };
+		51FC253A1D2E36690067CC71 /* BarChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FC25381D2E36690067CC71 /* BarChartTableViewCell.swift */; };
+		51FC253B1D2E36690067CC71 /* BarChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FC25391D2E36690067CC71 /* BarChartTableViewCell.xib */; };
+		51FC253E1D2E55600067CC71 /* TrendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FC253C1D2E55600067CC71 /* TrendTableViewCell.swift */; };
+		51FC253F1D2E55600067CC71 /* TrendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FC253D1D2E55600067CC71 /* TrendTableViewCell.xib */; };
+		8D89A8B7CFEB1A8D61159DD5 /* Pods_MoneyLove_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB1894169015666F2C78750 /* Pods_MoneyLove_1.framework */; };
 		EF3527161D2CAB5F009D6F58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3527151D2CAB5F009D6F58 /* AppDelegate.swift */; };
 		EF35271B1D2CAB5F009D6F58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3527191D2CAB5F009D6F58 /* Main.storyboard */; };
 		EF35271E1D2CAB5F009D6F58 /* MoneyLove_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF35271C1D2CAB5F009D6F58 /* MoneyLove_1.xcdatamodeld */; };
@@ -14,7 +31,7 @@
 		EF3527231D2CAB5F009D6F58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3527211D2CAB5F009D6F58 /* LaunchScreen.storyboard */; };
 		EF35272E1D2CAB5F009D6F58 /* MoneyLove_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35272D1D2CAB5F009D6F58 /* MoneyLove_1Tests.swift */; };
 		EF3527391D2CAB5F009D6F58 /* MoneyLove_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3527381D2CAB5F009D6F58 /* MoneyLove_1UITests.swift */; };
-		EF3527511D2CB6D2009D6F58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3527501D2CB6D2009D6F58 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		EF3527511D2CB6D2009D6F58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3527501D2CB6D2009D6F58 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +52,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1760546B05A7131B4A574D9E /* Pods-MoneyLove_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyLove_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyLove_1/Pods-MoneyLove_1.debug.xcconfig"; sourceTree = "<group>"; };
+		5153B1C81D2F48C800413269 /* PayReceiavableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PayReceiavableTableView.swift; path = Controllers/DebtViewController/PayReceiavableTableViewController/Cell/PayReceiavableTableView.swift; sourceTree = "<group>"; };
+		5153B1C91D2F48C800413269 /* PayReceiavableTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PayReceiavableTableView.xib; path = Controllers/DebtViewController/PayReceiavableTableViewController/Cell/PayReceiavableTableView.xib; sourceTree = "<group>"; };
+		51FC24A11D2DE58E0067CC71 /* DebtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebtViewController.swift; path = Controllers/DebtViewController/DebtViewController.swift; sourceTree = "<group>"; };
+		51FC24A21D2DE58E0067CC71 /* DebtViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DebtViewController.xib; path = Controllers/DebtViewController/DebtViewController.xib; sourceTree = "<group>"; };
+		51FC24A51D2DE6010067CC71 /* TrendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrendTableViewController.swift; path = Controllers/TrendTableViewController/TrendTableViewController.swift; sourceTree = "<group>"; };
+		51FC24A61D2DE6010067CC71 /* TrendTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrendTableViewController.xib; path = Controllers/TrendTableViewController/TrendTableViewController.xib; sourceTree = "<group>"; };
+		51FC24AA1D2DE6830067CC71 /* MonthlyReportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonthlyReportTableViewController.swift; path = Controllers/MonthlyReportTableViewController/MonthlyReportTableViewController.swift; sourceTree = "<group>"; };
+		51FC24AB1D2DE6830067CC71 /* MonthlyReportTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MonthlyReportTableViewController.xib; path = Controllers/MonthlyReportTableViewController/MonthlyReportTableViewController.xib; sourceTree = "<group>"; };
+		51FC25291D2E07A90067CC71 /* PayReceiavableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PayReceiavableTableViewController.swift; path = Controllers/DebtViewController/PayReceiavableTableViewController/PayReceiavableTableViewController.swift; sourceTree = "<group>"; };
+		51FC252A1D2E07A90067CC71 /* PayReceiavableTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PayReceiavableTableViewController.xib; path = Controllers/DebtViewController/PayReceiavableTableViewController/PayReceiavableTableViewController.xib; sourceTree = "<group>"; };
+		51FC25341D2E36350067CC71 /* ActionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionTableViewCell.swift; path = Controllers/TrendTableViewController/Cell/ActionTableViewCell.swift; sourceTree = "<group>"; };
+		51FC25351D2E36350067CC71 /* ActionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActionTableViewCell.xib; path = Controllers/TrendTableViewController/Cell/ActionTableViewCell.xib; sourceTree = "<group>"; };
+		51FC25381D2E36690067CC71 /* BarChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartTableViewCell.swift; sourceTree = "<group>"; };
+		51FC25391D2E36690067CC71 /* BarChartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarChartTableViewCell.xib; sourceTree = "<group>"; };
+		51FC253C1D2E55600067CC71 /* TrendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendTableViewCell.swift; sourceTree = "<group>"; };
+		51FC253D1D2E55600067CC71 /* TrendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrendTableViewCell.xib; sourceTree = "<group>"; };
+		9452D473482F06A265D66385 /* Pods-MoneyLove_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyLove_1.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyLove_1/Pods-MoneyLove_1.release.xcconfig"; sourceTree = "<group>"; };
+		DDB1894169015666F2C78750 /* Pods_MoneyLove_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyLove_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3527121D2CAB5F009D6F58 /* MoneyLove_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyLove_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3527151D2CAB5F009D6F58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF35271A1D2CAB5F009D6F58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D89A8B7CFEB1A8D61159DD5 /* Pods_MoneyLove_1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +113,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AE324428201FD11748CF9BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1760546B05A7131B4A574D9E /* Pods-MoneyLove_1.debug.xcconfig */,
+				9452D473482F06A265D66385 /* Pods-MoneyLove_1.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5153B1C31D2F478D00413269 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5153B1C81D2F48C800413269 /* PayReceiavableTableView.swift */,
+				5153B1C91D2F48C800413269 /* PayReceiavableTableView.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		5153B1CC1D2F4F0700413269 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		51FC24A01D2DE5710067CC71 /* DebtViewController */ = {
+			isa = PBXGroup;
+			children = (
+				51FC252D1D2E07B50067CC71 /* PayReceiavableTableViewController */,
+				51FC24A11D2DE58E0067CC71 /* DebtViewController.swift */,
+				51FC24A21D2DE58E0067CC71 /* DebtViewController.xib */,
+			);
+			name = DebtViewController;
+			sourceTree = "<group>";
+		};
+		51FC24A91D2DE6160067CC71 /* TrendTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				51FC252E1D2E358E0067CC71 /* Cell */,
+				51FC24A51D2DE6010067CC71 /* TrendTableViewController.swift */,
+				51FC24A61D2DE6010067CC71 /* TrendTableViewController.xib */,
+			);
+			name = TrendTableViewController;
+			sourceTree = "<group>";
+		};
+		51FC24AE1D2DE6860067CC71 /* MonthlyReportTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5153B1CC1D2F4F0700413269 /* Cell */,
+				51FC24AA1D2DE6830067CC71 /* MonthlyReportTableViewController.swift */,
+				51FC24AB1D2DE6830067CC71 /* MonthlyReportTableViewController.xib */,
+			);
+			name = MonthlyReportTableViewController;
+			sourceTree = "<group>";
+		};
+		51FC252D1D2E07B50067CC71 /* PayReceiavableTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5153B1C31D2F478D00413269 /* Cell */,
+				51FC25291D2E07A90067CC71 /* PayReceiavableTableViewController.swift */,
+				51FC252A1D2E07A90067CC71 /* PayReceiavableTableViewController.xib */,
+			);
+			name = PayReceiavableTableViewController;
+			sourceTree = "<group>";
+		};
+		51FC252E1D2E358E0067CC71 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				51FC25341D2E36350067CC71 /* ActionTableViewCell.swift */,
+				51FC25351D2E36350067CC71 /* ActionTableViewCell.xib */,
+				51FC25381D2E36690067CC71 /* BarChartTableViewCell.swift */,
+				51FC25391D2E36690067CC71 /* BarChartTableViewCell.xib */,
+				51FC253C1D2E55600067CC71 /* TrendTableViewCell.swift */,
+				51FC253D1D2E55600067CC71 /* TrendTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		CBBD674F3C809F7FD718B3A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDB1894169015666F2C78750 /* Pods_MoneyLove_1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF3527091D2CAB5F009D6F58 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +206,8 @@
 				EF35272C1D2CAB5F009D6F58 /* MoneyLove_1Tests */,
 				EF3527371D2CAB5F009D6F58 /* MoneyLove_1UITests */,
 				EF3527131D2CAB5F009D6F58 /* Products */,
+				3AE324428201FD11748CF9BF /* Pods */,
+				CBBD674F3C809F7FD718B3A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +260,9 @@
 			isa = PBXGroup;
 			children = (
 				EF3527501D2CB6D2009D6F58 /* ViewController.swift */,
+				51FC24A01D2DE5710067CC71 /* DebtViewController */,
+				51FC24A91D2DE6160067CC71 /* TrendTableViewController */,
+				51FC24AE1D2DE6860067CC71 /* MonthlyReportTableViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -167,9 +295,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF35273D1D2CAB5F009D6F58 /* Build configuration list for PBXNativeTarget "MoneyLove_1" */;
 			buildPhases = (
+				7FFF7673B620175443F80470 /* 📦 Check Pods Manifest.lock */,
 				EF35270E1D2CAB5F009D6F58 /* Sources */,
 				EF35270F1D2CAB5F009D6F58 /* Frameworks */,
 				EF3527101D2CAB5F009D6F58 /* Resources */,
+				EBC5B219EBBE97463144225B /* 📦 Embed Pods Frameworks */,
+				9AC899CD111070724BD8EFD7 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,6 +358,7 @@
 				TargetAttributes = {
 					EF3527111D2CAB5F009D6F58 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = DWAR2ZV53F;
 					};
 					EF3527281D2CAB5F009D6F58 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -264,6 +396,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF3527231D2CAB5F009D6F58 /* LaunchScreen.storyboard in Resources */,
+				51FC253F1D2E55600067CC71 /* TrendTableViewCell.xib in Resources */,
+				51FC24AD1D2DE6830067CC71 /* MonthlyReportTableViewController.xib in Resources */,
+				5153B1CB1D2F48C800413269 /* PayReceiavableTableView.xib in Resources */,
+				51FC252C1D2E07A90067CC71 /* PayReceiavableTableViewController.xib in Resources */,
+				51FC25371D2E36350067CC71 /* ActionTableViewCell.xib in Resources */,
+				51FC24A81D2DE6010067CC71 /* TrendTableViewController.xib in Resources */,
+				51FC253B1D2E36690067CC71 /* BarChartTableViewCell.xib in Resources */,
+				51FC24A41D2DE58E0067CC71 /* DebtViewController.xib in Resources */,
 				EF3527201D2CAB5F009D6F58 /* Assets.xcassets in Resources */,
 				EF35271B1D2CAB5F009D6F58 /* Main.storyboard in Resources */,
 			);
@@ -285,14 +425,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7FFF7673B620175443F80470 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9AC899CD111070724BD8EFD7 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyLove_1/Pods-MoneyLove_1-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBC5B219EBBE97463144225B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyLove_1/Pods-MoneyLove_1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF35270E1D2CAB5F009D6F58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51FC253A1D2E36690067CC71 /* BarChartTableViewCell.swift in Sources */,
+				51FC253E1D2E55600067CC71 /* TrendTableViewCell.swift in Sources */,
+				51FC252B1D2E07A90067CC71 /* PayReceiavableTableViewController.swift in Sources */,
+				5153B1CA1D2F48C800413269 /* PayReceiavableTableView.swift in Sources */,
 				EF3527511D2CB6D2009D6F58 /* ViewController.swift in Sources */,
+				51FC25361D2E36350067CC71 /* ActionTableViewCell.swift in Sources */,
+				51FC24AC1D2DE6830067CC71 /* MonthlyReportTableViewController.swift in Sources */,
+				51FC24A31D2DE58E0067CC71 /* DebtViewController.swift in Sources */,
 				EF3527161D2CAB5F009D6F58 /* AppDelegate.swift in Sources */,
 				EF35271E1D2CAB5F009D6F58 /* MoneyLove_1.xcdatamodeld in Sources */,
+				51FC24A71D2DE6010067CC71 /* TrendTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,23 +626,31 @@
 		};
 		EF35273E1D2CAB5F009D6F58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1760546B05A7131B4A574D9E /* Pods-MoneyLove_1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MoneyLove_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vantientu.MoneyLove-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		EF35273F1D2CAB5F009D6F58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9452D473482F06A265D66385 /* Pods-MoneyLove_1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MoneyLove_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vantientu.MoneyLove-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
