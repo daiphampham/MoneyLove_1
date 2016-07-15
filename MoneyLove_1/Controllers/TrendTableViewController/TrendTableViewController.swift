@@ -19,14 +19,46 @@ class TrendTableViewController: UITableViewController {
     let IDENTIFIER_ACTION_TABLE_CELL = "ActionTableViewCell"
     let IDENTIFIER_BAR_CHART_TABLE_CELL = "BarChartTableViewCell"
     let IDENTIFIER_TREND_TABLE_CELL = "TrendTableViewCell"
-    let arrMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+    var arrMonths = [String]()
+    var currentMonth: Int!
+    var currentYear: Int!
+    var fromMonth: Int = 1
+    var toMonth: Int!
+    var fromYear: Int!
+    var toYear: Int!
+    var fromDate: NSDate!
+    var toDate: NSDate!
+    
     @IBOutlet var subViewPicker: UIView!
     @IBOutlet weak var monthYearPickerView: MonthYearPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Left", style: UIBarButtonItemStyle.Plain, target: self, action: "presentLeftMenuViewController:")
+        setupInit()
+    }
+    
+    func setupInit() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(TrendTableViewController.doneAction(_:)))
+        self.tableView.addGestureRecognizer(tapGesture)
+        self.tableView.allowsSelection = false
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Left", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(TrendTableViewController.presentLeftMenuViewController(_:)))
+        currentMonth = NSDate.getCurrentMonth()
+        currentYear = NSDate.getCurrentYear()
+        fromYear = currentYear
+        toYear = currentYear
+        toMonth = currentMonth + 1
+        fromDate = NSDate(dateString: "\(fromYear)-\(fromMonth)")
+        toDate = NSDate(dateString: "\(toYear)-\(toMonth)")
+        let monthTmp = toDate.months(from: fromDate)
+        reloadDataTableView(monthTmp+1)
+    }
+    
+    func reloadDataTableView(numberMonth: Int) {
+        for i in 0...numberMonth {
+            arrMonths.append(DataPageView.getMonthPage(i, toDate: fromDate))
+        }
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,23 +82,43 @@ class TrendTableViewController: UITableViewController {
         if section == 0 {
             return NUMBER_ROW_SECTION0
         }
-        return NUMBER_ROW_SECTION1
+        return arrMonths.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let actionCell = tableView.dequeueReusableCellWithIdentifier(IDENTIFIER_ACTION_TABLE_CELL, forIndexPath: indexPath) as! ActionTableViewCell
+            actionCell.btnDateFrom.setTitle("\(fromMonth)/\(fromYear)", forState: UIControlState.Normal)
+            actionCell.btnDateTo.setTitle("\(toMonth)/\(toYear)", forState: UIControlState.Normal)
             actionCell.actionHandler = { [weak self] (name: String) -> () in
                 NSBundle.mainBundle().loadNibNamed("DatePickerView", owner: self, options: nil)
                 self!.subViewPicker.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width/2, UIScreen.mainScreen().bounds.height/2)
                 self!.subViewPicker.center = self!.view.center
                 self!.view.addSubview(self!.subViewPicker)
-                self!.monthYearPickerView.onDateSelected = { (nameMonth: String, year: Int) in
+                self!.monthYearPickerView.onDateSelected = { (nameMonth: String, indexMonth: Int, year: Int) in
                     if name == "From" {
-                        actionCell.btnDateFrom.setTitle("\(nameMonth)  \(year)", forState: .Normal)
+                        let dateTmp = NSDate(dateString: "\(year)-\(indexMonth)")
+                        let monthTmp = dateTmp.months(from: self!.toDate)
+                        if monthTmp < 0 {
+                            actionCell.btnDateFrom.setTitle("\(indexMonth)/\(year)", forState: .Normal)
+                            self!.fromMonth = indexMonth
+                            self!.fromYear = year
+                            self!.fromDate = dateTmp
+                            self!.arrMonths.removeAll()
+                            self!.reloadDataTableView(-(monthTmp+1))
+                        }
                         //TODO
                     } else {
-                        actionCell.btnDateTo.setTitle("\(nameMonth)  \(year)", forState: .Normal)
+                        let dateTmp = NSDate(dateString: "\(year)-\(indexMonth)")
+                        let monthTmp = dateTmp.months(from: self!.fromDate)
+                        if monthTmp > 0 {
+                            actionCell.btnDateTo.setTitle("\(indexMonth)/\(year)", forState: .Normal)
+                            self!.toMonth = indexMonth
+                            self!.toYear = year
+                            self!.toDate = dateTmp
+                            self!.arrMonths.removeAll()
+                            self!.reloadDataTableView(monthTmp+1)
+                        }
                         //TODO
                     }
                 }
@@ -99,6 +151,7 @@ class TrendTableViewController: UITableViewController {
     @IBAction func doneAction(sender: AnyObject) {
         subViewPicker.removeFromSuperview()
     }
+    
 }
 
 extension TrendTableViewController: RESideMenuDelegate {

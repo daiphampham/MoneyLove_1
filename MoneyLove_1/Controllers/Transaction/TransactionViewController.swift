@@ -45,7 +45,7 @@ class TransactionViewController: UIViewController, NSFetchedResultsControllerDel
     @IBOutlet weak var deleteButton: UIButton!
     var managedTransactionObject:Transaction!
     weak var delegate: TransactionViewControllerDelegate?
-    var transactionCache:(note: String?, date: NSTimeInterval, people: String?, money:Double, group: Group?, wallet: Wallet?) = ("", 0.0, "", 0.0, nil, nil)
+    var transactionCache: (note: String?, date: NSTimeInterval, people: String?, money:Double, group: Group?, wallet: Wallet?) = ("", 0.0, "", 0.0, nil, nil)
     var isNewTransaction = true
     var indexPath:NSIndexPath?
     override func viewDidLoad() {

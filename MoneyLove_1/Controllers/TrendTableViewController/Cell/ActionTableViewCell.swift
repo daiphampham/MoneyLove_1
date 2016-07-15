@@ -8,15 +8,35 @@
 
 import UIKit
 
+enum SegmentGroupBy: Int {
+    case EXPENSE, INCOME, NETINCOME
+    static let arrGroup = [EXPENSE, INCOME, NETINCOME]
+    
+    func title() {
+        switch self {
+        case EXPENSE:
+            print("expens")
+        case INCOME:
+            print("income")
+        case NETINCOME:
+            print("net income")
+        }
+
+    }
+}
+
 class ActionTableViewCell: UITableViewCell {
     
     var actionHandler: ((nameAction: String) -> Void)!
     @IBOutlet weak var btnDateFrom: UIButton!
     @IBOutlet weak var btnDateTo: UIButton!
-    
+    @IBOutlet weak var segmentGroupType: UISegmentedControl!
+    @IBOutlet weak var segmentGroupBy: UISegmentedControl!
+    let arrTitles = SegmentGroupBy.arrGroup
+   
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -31,5 +51,14 @@ class ActionTableViewCell: UITableViewCell {
     
     @IBAction func dateToAction(sender: AnyObject) {
         actionHandler(nameAction: "To")
+    }
+    
+    @IBAction func segmentGroupTypeAction(sender: AnyObject) {
+        let segmentIndex = arrTitles[segmentGroupBy.selectedSegmentIndex]
+        segmentIndex.title()
+    }
+    
+    @IBAction func segmentGroupByAction(sender: AnyObject) {
+        
     }
 }

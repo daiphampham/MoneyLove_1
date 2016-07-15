@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TabPageViewController
 
 protocol MenuViewControllerDelegate: class {
     func showWalletViewController()
@@ -37,13 +38,24 @@ enum VIEWCONTROLLER: Int {
             let transactionVC = TransactionViewController()
             return transactionVC
         case DebtsViewControllers:
-            let debtsVC = DebtViewController()
-            return debtsVC
+            let tabPageVC: TabPageViewController = TabPageViewController.create()
+            tabPageVC.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "Left", style: UIBarButtonItemStyle.Plain, target: tabPageVC, action: #selector(TabPageViewController.presentLeftMenuViewController(_:)))
+            tabPageVC.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .Add, target: tabPageVC, action: #selector(TabPageViewController.add(_:)))
+            let payableVC = PayReceiavableTableViewController(nibName: "PayReceiavableTableViewController", bundle: nil)
+            payableVC.color = UIColor.greenColor()
+            let receivableVC = PayReceiavableTableViewController(nibName: "PayReceiavableTableViewController", bundle: nil)
+            payableVC.color = UIColor.redColor()
+            tabPageVC.tabItems = [(payableVC, "Payable"), (receivableVC, "Receivable")]
+            var option = TabPageOption()
+            option.tabWidth = UIScreen.mainScreen().bounds.size.width / CGFloat(tabPageVC.tabItems.count)
+            tabPageVC.option = option
+            tabPageVC.title = "DEBTS"
+            return tabPageVC
         case TrendsViewControllers:
             let trendsVC = TrendTableViewController()
             return trendsVC
         case MonthlyReportViewControllers:
-            let mothlyReportVC = PageReportViewController()
+            let mothlyReportVC = MonthlyReportViewController()
             return mothlyReportVC
         case CategoriesViewControllers:
             let categoriesVC = CategoriesViewController()
@@ -90,6 +102,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 44
     }
+    
     //MARK: UITableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
@@ -132,3 +145,17 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
 }
+
+extension TabPageViewController: RESideMenuDelegate {
+    public override func presentLeftMenuViewController(sender: AnyObject!) {
+        self.sideMenuViewController.presentLeftMenuViewController()
+    }
+    
+    func add(sender: AnyObject) {
+//        let transaction = TransactionViewController(nibName: "TransactionViewController", bundle: nil)
+//        self.navigationController?.pushViewController(transaction, animated: true)
+    }
+}
+
+
+
